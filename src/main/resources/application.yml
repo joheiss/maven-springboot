@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: spring-with-mvn
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - "*"
+  info:
+    git:
+      mode: full
