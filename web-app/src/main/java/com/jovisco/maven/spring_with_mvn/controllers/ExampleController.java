@@ -6,6 +6,8 @@ import java.util.HashMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.jovisco.json.model.ShippingAddress;
+
 @RestController
 public class ExampleController {
 
@@ -15,5 +17,10 @@ public class ExampleController {
         values.put("greeting", "Hi");
         values.put("name", "Josef");
         return values;
+    }
+
+    @GetMapping("/shipping")
+    public ShippingAddress getShippingAddress() {
+        return new ShippingAddress();
     }
 }
